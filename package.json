@@ -12,5 +12,11 @@
   "dependencies": {
     "canvas": "2.11.2",
     "confetti": "2.0.3"
+  },
+  "devDependencies": {
+    "standard": "^17.1.0"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/standard/eslintrc.json"
   }
 }
