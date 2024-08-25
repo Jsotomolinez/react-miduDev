@@ -10,15 +10,17 @@ const FollowMouse = () => {
 
     const handleMove = (event) => {
       const { clientX, clientY } = event
-      console.log('handleMove', { clientX, clientY})
+      // console.log('handleMove', { clientX, clientY})
       setPosition({ x: clientX, y: clientY})
     }
 
     if (enabled) {
+      console.log('pointer move', handleMove)
       window.addEventListener('pointermove', handleMove)
     }
 
     return () => {
+      console.log('cleanup')
       window.removeEventListener('pointermove', handleMove)
     }
   }, [enabled])
